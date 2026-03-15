@@ -84,7 +84,7 @@
             resultDiv.innerHTML = '<p class="loading">Mencari...</p>';
 
             try {
-                const response = await fetch(`http://localhost:5000/search?q=${keyword}`);
+                const response = await fetch(`https://barcelona-backend-sss.vercel.app/search?q=${keyword}&method=bfs`);
                 const data = await response.json();
                 
                 if (data.success && data.results.length > 0) {
